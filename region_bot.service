@@ -1,0 +1,15 @@
+[Unit]
+Description=region_bot
+After=network.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+WorkingDirectory=/root/tgbots/region_bot
+ExecStart=/root/tgbots/region_bot/venv/bin/python3.9 bot.py
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
