@@ -118,7 +118,6 @@ async def get_detail_marks(message):
 
     result_to_db = []
     result_to_user = ''
-
     for days in diary['weekDays']:
         for lesson in days['lessons']:
             if 'assignments' in lesson.keys():
@@ -221,7 +220,8 @@ async def get_report(message, call):
         # await api.get_fullreport_from_Report() ///попытка получить полный отчёт успеваемости и посещаемости
 
     await api.logout()
-    hti = Html2Image(output_path = save_path_img, custom_flags = [ '--no-sandbox'] )
-    hti.screenshot(html_str=html_page, css_str = css_file, save_as=str(message.chat.id)+'.jpeg', size = resize_params)
+    hti = Html2Image(output_path=save_path_img, custom_flags = [ '--no-sandbox'] )
+    hti.screenshot(html_str=html_page, css_str=css_file, save_as=str(message.chat.id)+'.jpeg', size=resize_params)
     photo = types.InputFile(save_path_img+'/'+str(message.chat.id)+'.jpeg')
     return photo
+

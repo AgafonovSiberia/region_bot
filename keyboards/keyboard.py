@@ -5,7 +5,7 @@ keyboard_main = InlineKeyboardMarkup(row_width=3)
 keyboard_main.add(
     InlineKeyboardButton(text="Расписание", callback_data="get_diary"), 
     InlineKeyboardButton(text="График звонков", callback_data="get_timetable"),
-    InlineKeyboardButton(text="Объявления СГО", callback_data="get_board"),
+    InlineKeyboardButton(text="Объявления", callback_data="get_board"),
     InlineKeyboardButton(text="Мои оценки", callback_data="get_marks"),
     InlineKeyboardButton(text="Моё ДЗ", callback_data="get_homework"),
     InlineKeyboardButton(text="Моя школа", callback_data="get_school_info")
