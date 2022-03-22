@@ -1,3 +1,2 @@
-# BotSGO
-
-Использован реп https://github.com/0ladyshek/netschool
+Бот Сетевой город "Образование"
+На момент релиза работает только для region.zabedu.ru
